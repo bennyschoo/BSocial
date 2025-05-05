@@ -1,0 +1,24 @@
+:root{
+    --sidebar-width: 73px;
+}
+
+.SideBar{
+    height: 100vh;
+}
+
+.content{
+    width: calc(100% - var(--sidebar-width)) !important;
+    min-height: 100vh;
+}
+
+.bg-dark{
+    background-color: #001120 !important;
+}
+
+.bg-secondary{
+    background-color: #00152e !important;
+}
+
+.text-light{
+    color: #e6e6e6 !important;
+}
