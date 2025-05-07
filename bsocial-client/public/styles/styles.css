@@ -2,9 +2,6 @@
     --sidebar-width: 73px;
 }
 
-.SideBar{
-    height: 100vh;
-}
 
 .content{
     width: calc(100% - var(--sidebar-width)) !important;
@@ -17,6 +14,10 @@
 
 .bg-secondary{
     background-color: #00152e !important;
+}
+
+.bg-info{
+    background-color: #312c33 !important;
 }
 
 .text-light{

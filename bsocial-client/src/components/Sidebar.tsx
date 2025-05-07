@@ -7,7 +7,7 @@ import logo from "../assets/logo.svg";
 function Sidebar() {
 
     return (
-        <div className="SideBar d-flex flex-column p-3 bg-dark justify-content-between border-end border-dark position-fixed">
+        <div className="d-flex flex-column p-3 bg-dark justify-content-between border-end border-dark position-fixed" style={{height: "100vh"}}>
             <SideBarButton icon={logo} />
             <div className="d-flex flex-column">
                 <SideBarButton icon={homeicon} onClick={() => console.log("Home clicked")} />
