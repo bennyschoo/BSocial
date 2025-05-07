@@ -1,8 +1,11 @@
-import { useMediaQuery } from "react-responsive";
 import Post from './Post.tsx';
 
-function Posts() {
-  const isDesktop = useMediaQuery({ minWidth: 541});
+interface PostsProps {
+  isDesktop: boolean;
+}
+
+
+function Posts({isDesktop}: PostsProps) {
 
   return (
     <div className="posts d-flex flex-column gap-3" style={{width: isDesktop ? "450px" : "100%"}}>
