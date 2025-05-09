@@ -8,7 +8,7 @@ interface ProfilePicProps {
 
 function ProfilePic({url, size=40, alt="Profile Picture"}: ProfilePicProps) {
     return (
-        <img src={url} alt={alt} className="rounded-circle border border-light" height={size}/>
+        <img src={url} alt={alt} className="profile-pic rounded-circle" height={size}/>
     );
 }
 

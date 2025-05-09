@@ -1,4 +1,4 @@
-import SideBarButton from "./SideBarButton.tsx";
+import SideBarButton from "./UIButton.tsx";
 import homeicon from "../assets/homeIcon.svg";
 import messageicon from "../assets/messageicon.svg";
 import settingsicon from "../assets/settingsicon.svg";
