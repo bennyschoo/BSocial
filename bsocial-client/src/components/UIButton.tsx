@@ -1,14 +1,17 @@
 
-interface SideBarButtonProps {
+interface UIButtonProps {
     icon: string;
+    size?: number;
+    text?: string;
     onClick?: () => void;
 }
 
-function SideBarButton({ icon, onClick }: SideBarButtonProps) {
+function SideBarButton({ icon, size=30, text="", onClick }: UIButtonProps) {
     
     return <>
-        <button className="btn sidebar-button p-1 my-3" onClick={onClick}>
-            <img src={icon} height={30}></img>
+        <button className="d-flex gap-3 btn sidebar-button p-1" onClick={onClick}>
+            <img src={icon} height={size} alt="User Interface Button"></img>
+            {text && <h5 className="text-light my-auto">{text}</h5>}
         </button>
     </>
 }

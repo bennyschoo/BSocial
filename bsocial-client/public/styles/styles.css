@@ -1,6 +1,8 @@
 :root{
     --sidebar-width: 73px;
+    --border-color: #5e5e5e;
 }
+
 
 
 .desktop-content{
@@ -25,10 +27,15 @@
 }
 
 .profile-pic{
-    border: 2px solid #5e5e5e;
+    border: 2px solid var(--border-color) !important;
 }
 
 .post-content{
     border-radius: 8px;
-    border: 1px solid #5e5e5e;
+    border: 1px solid var(--border-color) !important;
 }
+
+.post{
+    border-bottom: var(--border-color) solid 1px;
+}
+

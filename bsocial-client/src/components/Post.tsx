@@ -17,9 +17,10 @@ function Post({postid, pfpUrl="/img/default_pfp.jpg", username, datetime, conten
 
 
     return (
-        <div className=" d-flex flex-column" key={postid} style={{width:"100%"}}>
+        <div className="post d-flex flex-column pb-4 pt-2" key={postid} style={{width:"100%"}}>
             <TopBar pfpUrl={pfpUrl} username={username} datetime={datetime} />
             {contenturl && <PostContent contenturl={contenturl} />}
+            <BottomBar postid={postid} />
             {caption && <CaptionBox caption={caption} username={username}/>}
         </div>
     )
