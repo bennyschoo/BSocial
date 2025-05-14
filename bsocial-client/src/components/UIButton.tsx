@@ -6,7 +6,7 @@ interface UIButtonProps {
     onClick?: () => void;
 }
 
-function SideBarButton({ icon, size=30, text="", onClick }: UIButtonProps) {
+function UIButton({ icon, size=30, text="", onClick }: UIButtonProps) {
     
     return <>
         <button className="d-flex gap-3 btn sidebar-button p-1" onClick={onClick}>
@@ -15,4 +15,4 @@ function SideBarButton({ icon, size=30, text="", onClick }: UIButtonProps) {
         </button>
     </>
 }
-export default SideBarButton;
+export default UIButton;

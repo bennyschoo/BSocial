@@ -6,7 +6,6 @@
 
 
 .desktop-content{
-    width: calc(100% - var(--sidebar-width)) !important;
     min-height: 100vh;
 }
 
