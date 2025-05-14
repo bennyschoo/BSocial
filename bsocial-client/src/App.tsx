@@ -4,7 +4,7 @@ import useMeasure from "react-use-measure";
 import Sidebar from "./components/Sidebar"
 import Home from "./components/home_components/Home.tsx";
 import PageNotFound from "./components/pageNotFound_components/PageNotFound.tsx";
-
+import Search from "./components/search_components/Search.tsx";
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 541});
   // useMeasure to get the width of the sidebar
@@ -37,6 +37,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="" element={<Home isDesktop={isDesktop} />} />
             <Route path="home" element={<Home isDesktop={isDesktop} />} />
+            <Route path="search" element={<Search />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
