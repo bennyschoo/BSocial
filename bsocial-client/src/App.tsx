@@ -1,17 +1,20 @@
 import { useMediaQuery } from "react-responsive";
-import Sidebar from "./components/Sidebar"
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import useMeasure from "react-use-measure";
+import Sidebar from "./components/Sidebar"
 import Home from "./components/home_components/Home.tsx";
 import PageNotFound from "./components/pageNotFound_components/PageNotFound.tsx";
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 541});
-  const sidebarExpanded = useMediaQuery({ minWidth: 750 });
- 
+  // useMeasure to get the width of the sidebar
+  const [ref, sidebarBounds] = useMeasure();
+  const sidebarWidth = sidebarBounds.width;
+
   const desktopLayout = (
     <div className="d-flex text-light">
-        <Sidebar expanded={sidebarExpanded} />
-        <div className='desktop-content bg-secondary ms-auto d-flex flex-column align-items-center' style={{"width": `calc(100% - ${73}px)`}}>
+        <Sidebar ref ={ref as unknown as HTMLOrSVGElement}/>
+        <div className='desktop-content ms-auto d-flex flex-column align-items-center' style={{"width": `calc(100% - ${sidebarWidth}px)`}}>
           <Outlet />
         </div>
     </div>
