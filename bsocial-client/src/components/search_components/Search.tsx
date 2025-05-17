@@ -1,10 +1,13 @@
-
+import SearchBar from "./SearchBar.tsx";
+import SearchResult from "./SearchResult.tsx";  
 
 function Search() {
     return (
-        <div className="d-flex flex-column align-items-center justify-content-center" style={{height: "100vh"}}>
-            <h1>Search</h1>
-            <p>Search functionality will be implemented here.</p>
+        <div className="search">
+            <SearchBar onSearch={(input)=>{console.log(input)}} />
+            <SearchResult pfpurl="/img/traccie.jpg" username="Traccie" following={true}/>
+            <SearchResult pfpurl="/img/traccie.jpg" username="Traccie" following={false}/>
+
         </div>
     );
 }

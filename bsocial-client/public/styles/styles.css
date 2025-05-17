@@ -38,3 +38,13 @@
     border-bottom: var(--border-color) solid 1px;
 }
 
+.search-bar{
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.search{
+    width: 80%;
+    max-width: 700px;
+}
