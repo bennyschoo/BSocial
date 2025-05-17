@@ -7,7 +7,6 @@ function Search() {
             <SearchBar onSearch={(input)=>{console.log(input)}} />
             <SearchResult pfpurl="/img/traccie.jpg" username="Traccie" following={true}/>
             <SearchResult pfpurl="/img/traccie.jpg" username="Traccie" following={false}/>
-
         </div>
     );
 }
